@@ -22,7 +22,10 @@ TOOLS AND WHEN TO USE THEM:
    - Output: {{"tool_choice": "no tool", "tool_input": "I'm functioning well, thank you"}}
 
 STRICT RULES:
-...
+- Always respond with valid JSON format
+- Choose the most appropriate tool based on the user's request
+- If no tool is suitable, use "no tool" and provide a helpful response
+- Extract numbers and operations accurately from natural language
 
 Here is a list of your tools along with their descriptions:
 {tool_descriptions}

@@ -42,3 +42,6 @@ class OllamaModel:
         except requests.RequestException as e:
             response = {"error": f"Error in invoking model: {str(e)}"}
             return response
+        except (json.JSONDecodeError, KeyError) as e:
+            response = {"error": f"Error parsing model response: {str(e)}"}
+            return response
